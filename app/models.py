@@ -1,3 +1,4 @@
+from datetime import datetime
 class User (object):
 
     def __init__(self, username, password):
@@ -29,7 +30,7 @@ class Comment(object):
     def __init__(self, message, author):
         self.message = message
         self.author = author
-        self.timestamp = "time stamp from python"
+        self.timestamp = datetime.utcnow()
 
 
 class Reply(Comment):
